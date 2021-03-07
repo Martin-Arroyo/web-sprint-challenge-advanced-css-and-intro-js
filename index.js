@@ -211,7 +211,7 @@ Practice accessing data above by console.log-ing following items:
 
 
 //(2) Bio of the third artist (2nd index) in the array 
-
+const test123
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
