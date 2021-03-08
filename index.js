@@ -302,9 +302,12 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
+function addArtist(array, id, name, years, genre, nationality, bio){
+  array.push({id: id, name: name, years: years, genre: genre, nationality: nationality, bio: bio})
     /*Your Code Here*/
   }
+  addArtist (artists, 31, 'Martin Arroyo', 1989-3000, 'Web-Design', 'American', 'I hope I did okay')
+  console.log(artists)
 
   
 
@@ -315,8 +318,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+  let moreThan100 = []
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].paintings > 100) {
+      moreThan100.push(array[i])
+    }
+  }
+  return moreThan100
 }
 
 
