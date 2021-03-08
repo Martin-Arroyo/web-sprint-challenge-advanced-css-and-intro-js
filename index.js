@@ -251,9 +251,22 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(array, year){
+  let yearsSubStrings = []
+  let diedIn20s = []
+  for (let i = 0; i <array.length; i++) {
+    yearsSubStrings.push(array[i].years.split(' - '))
+  }
+  // console.log(yearsSubStrings)
+  for (let i = 0; i <yearsSubStrings.length; i++) {
+    if (((Math.floor((yearsSubStrings[i][0])/100)) * 100) === year && ((Math.floor((yearsSubStrings[i][1])/100)) * 100) === year || ((Math.floor((yearsSubStrings[i][0])/100)) * 100) === 2000) {
+      diedIn20s.push(array[i].name)
+    }
+  }
+  return diedIn20s
+
 }
+console.log(get20s(artists, 1900))
 
 
 
@@ -266,7 +279,9 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
+function removeArtist(array, index){
+  array.splice(index, 1)
+  console.log(artists, 0)
    /*Your Code Here*/
 }
    
